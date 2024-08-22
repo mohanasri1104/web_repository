@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#title{
+    font-weight: normal;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-family: Cambria;
+    word-spacing: 0.2em;
+    letter-spacing: 0.1rem
+}
+.header{
+    background: linear-gradient(270deg, rgb(0,255,0), 
+    #bfff00);
+    width: 100%;
+}
+body{
+    background-color: rgba(0, 0, 0);
+}
+#rule-button{
+    margin-top: 70px;
+    padding: 20px 30px;
+    border-radius: 12px;
+    font-size: 20px;
+    font-family: Cambria;
+    word-spacing: 0.2em;
+    letter-spacing: 0.1rem;
+    background-color: white;
+    box-shadow: 0 0 10px 0 white;
+    border: none;
+    position: relative;
+}
+#rule-button::after{
+    width: 103%;
+    height: 112%;
+    background: linear-gradient(270deg, rgb(0,255,0), 
+    #bfff00);
+    position: absolute;
+    content: "";
+    bottom: -4px;
+    left: -6px;
+    z-index: -1;
+    border-radius: 15px;
+}
+#rule-button:hover{
+    z-index: 1;
+    cursor: pointer;
+}
+.popup, .popupwon, .popuplose{
+    width: 50%;
+    max-width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    font-family: Cambria;
+    font-size: 19px;
+    text-align: justify;
+    line-height: 1.7rem; 
+    z-index: 1;
+    border-radius: 15px;
+    box-shadow: 0 0 20px 0 rgb(0,255,0);
+    color: white;
+    display: none;
+}
+.popup ul{
+    padding-left: 50px;
+}
+.popup p, .popupwon p, .popuplose p{
+    padding-bottom: 10px;
+}
+.popup button, .popupwon button, .popuplose button{
+    border-radius: 15px;
+    padding: 7px 20px;
+    position: relative;
+    background-color: white;
+    font-family: Cambria;
+    border: none;
+    font-size: 15px;
+}
+.popup button::after, .popupwon button::after, .popuplose button::after{
+    content: "";
+    position: absolute;
+    width: 108%;
+    height: 125%;
+    background: linear-gradient(270deg, rgb(0,255,0), 
+    #bfff00);
+    bottom: -4px;
+    left: -4px;
+    z-index: -1;
+    border-radius: 17px;   
+}
+.popup button:hover, .popuplose button:hover, .popupwon button:hover{
+    z-index: 1;
+    cursor: pointer;
+}
+.popupoverlay{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    display: none;
+}
+.scores{
+    color: white;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    margin-top: 70px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 70px;
+    white-space: nowrap;
+    font-family: Cambria;
+    font-size: 20px;
+    letter-spacing: 1px;
+    word-spacing: 0.2em;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    column-gap: 70px;
+}
+.button button{
+    padding: 6px 20px;
+    font-family: Cambria;
+    font-weight: bold;
+    font-size: 17px;
+    background: linear-gradient(270deg, rgb(0,255,0), 
+    #bfff00);
+    border: none;
+    border-radius: 5px;
+   
+}
+.button button:hover{
+    box-shadow: 0px 0px 20px 0  rgb(0,255,0);
+    cursor: pointer;
+}
+.popupwon p, .popuplose p{
+    text-align: center;
+    padding-bottom: 30px;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.3rem;
+}
+.update{
+    color: white;
+    margin: 50px auto;
+    width: 50%;
+    max-width: 500px;
+    box-shadow: 0 0 10px 0 rgb(0,255,0);
+    padding: 20px 30px;
+    line-height: 2rem;
+    font-family: Cambria;
+    font-size: 18px;
+}
+@media (max-width: 768px){
+    body{
+      font-size: 15px;
+  }
+  #rule-button{
+    padding: 10px;
+  }
+  #rule-button::after{
+    top: -2px;
+    left: -5px;
+  }
+  .scores{
+    gap: 20px;
+  }
+  .button{
+    column-gap: 15px; 
+  }
+}

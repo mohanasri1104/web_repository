@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock , Paper and Scissors</title>
+    <link rel="stylesheet" type="text/css" href="rps.css">
+    </head>
+    <body>
+        
+        <div class="header">
+        <h1 id="title">Let's play Rock Paper and Scissors</h1>
+        </div>
+        <section id="content">
+        <center>    
+        <button id="rule-button" onclick="displayrules()">Click here to know about rules</button>
+        </center>
+        
+        <div class="scores">
+        <p id="player-score">Your score: <span id="p-score">0</span></p>
+        <p id="computer-score">Computer score: <span id="c-score">0</span></p>
+        </div>
+
+        <div class="popup">
+            <p>Player have to remember 3 points 
+            <ul>
+                
+                <li>Rock beats Scissors</li>
+                <li>Paper beats Rock</li>
+                <li>Scissors beats Paper</li>
+            </ul></p>
+            <p>If you won you get 1 point or else you will be awarded no point, The point will go to computer</p>
+            <p>If player and computer selects same item ( Eg: Paper and Paper or Rock and Rock ), it will tie, No points will be awarded for the player and the computer</p>
+            <center><button id="cancel" onclick="cancelpopup()">CANCEL</button></center>
+        </div>
+
+        <div class="popupwon">
+            <p>YOU WON !!!</p> 
+        <center><button id="won-button">REPLAY</button></center></div>
+
+        <div class="popuplose">
+            <p>YOU LOSE</p>
+            <p>BETTER LUCK NEXT TIME</p>
+            <center><button id="lose-button">REPLAY</button></center>
+        </div>
+
+        <div class="popupoverlay">
+
+        </div>
+
+        <div class="update">
+            <p>Computer : <span id="computer"></span></p>
+            <p>Player : <span id="player"></span></p>
+            <p id="wins"></p>
+        </div>
+
+        <div class="button">
+        <button id="rock" value="rock">ROCK</button>
+        <button id="paper" value="paper">PAPER</button>
+        <button id="scissors" value="scissors">SCISSORS</button>
+        </div>
+        </section>
+
+
+
+        <script src="rps.js"></script>
+    </body>
+</html>
